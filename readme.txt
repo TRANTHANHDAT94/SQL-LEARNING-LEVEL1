@@ -1,5 +1,5 @@
 -1.CÀI ĐẶTMS SQL SERVER: docker pull mcr.microsoft.com/mssql/server:2017-latest...
--Đợimáy finish download-Tiếp tục chạy command sau:docker volume create vmssql
--Cài đặt password cho tàikhoản đăng nhập SA bằngcommand sau:docker run -e 'ACCEPT_EULA=Y' --name c-sqlserver-e 'SA_PASSWORD=Password678' -p 1433:1433 -v vmssql:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latestNote:•User quản trịmặc định MS SQLServer có tên làsa.
--Check docker: docker ps -a or you can use the UI to check what we have in your docker build now!
--Run SQLSever to support runnning the AZURE or other IDE: docker start LocalSQLServer 
+-2.Đợimáy finish download-Tiếp tục chạy command sau:docker volume create vmssql
+-3.Cài đặt password cho tàikhoản đăng nhập SA bằngcommand sau:docker run -e 'ACCEPT_EULA=Y' --name c-sqlserver-e 'SA_PASSWORD=Password678' -p 1433:1433 -v vmssql:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latestNote:•User quản trịmặc định MS SQLServer có tên làsa.
+-4.Check docker: docker ps -a or you can use the UI to check what we have in your docker build now!
+-5.Run SQLSever to support runnning the AZURE or other IDE: docker start LocalSQLServer 
