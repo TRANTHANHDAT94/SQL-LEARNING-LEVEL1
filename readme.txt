@@ -1,2 +1,5 @@
-1.CÀI ĐẶTMS SQL SERVER-MởTerminal trênMac.-Gõ command sau đểcheck Docker đã được cài đặt trên Mac của bạn:docker --versionTerminalsẽhiển thịphiên bản Docker đã cài đặt trên MacVí dụ:-Tại Terminal tiếp tục chạy command sau:docker pull mcr.microsoft.com/mssql/server:2017-latest...Đợimáy finish download-Tiếp tục chạy command sau:docker volume create vmssql-Cài đặt password cho tàikhoản đăng nhập SA bằngcommand sau:docker run -e 'ACCEPT_EULA=Y' --name c-sqlserver-e 'SA_PASSWORD=Password678' -p 1433:1433 -v vmssql:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latestNote:•User quản trịmặc định MS SQLServer có tên làsa.•Password được thiết lập bằng biến môi trườngSA_PASSWORD(Đặt password phải mạnh,bắttừ8 ký tự, gồm số, chữ), nên ghi nhớpassword này đểthuận tiện trong quá trình sửdụng.•Ghi nhớ‘c-sqlserver’trong command ởtrên đểkhởi động container dịch vụSQL SERVER (có thểthay bằng một tên khác)
-
+-1.CÀI ĐẶTMS SQL SERVER: docker pull mcr.microsoft.com/mssql/server:2017-latest...
+-Đợimáy finish download-Tiếp tục chạy command sau:docker volume create vmssql
+-Cài đặt password cho tàikhoản đăng nhập SA bằngcommand sau:docker run -e 'ACCEPT_EULA=Y' --name c-sqlserver-e 'SA_PASSWORD=Password678' -p 1433:1433 -v vmssql:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latestNote:•User quản trịmặc định MS SQLServer có tên làsa.
+-Check docker: docker ps -a or you can use the UI to check what we have in your docker build now!
+-Run SQLSever to support runnning the AZURE or other IDE: docker start LocalSQLServer 
